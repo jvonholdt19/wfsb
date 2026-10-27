@@ -75,3 +75,44 @@ table.cd{border-collapse:collapse;width:100%}table.cd th,table.cd td{text-align:
 footer .comp a{color:inherit;text-decoration:none}
 .cta .btn.ghost{color:#fff;border-color:#fff;background:transparent}
 .pcard img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+/* ---- mobile polish ---- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}body{overflow-wrap:break-word}
+label{font-size:1rem}input,select,textarea{font-size:16px!important}
+.tscroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1rem 0}.tscroll>table{margin:0}
+.loc img{max-width:300px;height:auto}
+.copy p a,.copy li a{word-break:break-word}
+a[href^="tel:"]{white-space:nowrap}
+@media(max-width:879px){
+ header .wrap{flex-wrap:wrap;padding:.7rem 1rem}.mark{flex:1 1 auto;min-width:0;font-size:1.25rem}
+ .menu-btn{min-height:44px;min-width:76px;padding:.6rem 1rem;font-size:1rem;margin-left:auto}
+ #site-menu a{display:flex;align-items:center;min-height:48px;padding:.4rem .25rem;border-bottom:1px solid #f0ebe1}
+ #site-menu a[aria-current]{text-decoration:none;box-shadow:inset 4px 0 0 var(--gold);padding-left:.75rem}
+ .menu-util{background:#f6f2ea;border-radius:10px;padding:.3rem .75rem;margin-top:.7rem}
+ .menu-util::before{content:"More";font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--muted);padding:.4rem 0 .1rem}
+ .menu-util a:last-child{border-bottom:0}
+}
+@media(max-width:600px){
+ .wrap{padding:0 1rem}section{padding:2.75rem 0}
+ .concept{position:static;font-size:.78rem;padding:.4rem .75rem;line-height:1.35}
+ .hero{padding:2.25rem 0 3.5rem}.hero .wrap{gap:1.6rem}.hero p.lead{font-size:1.05rem}
+ .card{padding:1.25rem}.card input{min-height:48px}
+ .card .small a,.cform button,.btn,button{min-height:48px}
+ .card .small{display:flex;gap:1.25rem}.card .small a{display:inline-flex;align-items:center}
+ .quick ul{grid-template-columns:1fr 1fr;padding:.4rem}.quick a{padding:.7rem .5rem;min-height:56px;font-size:.95rem}.quick .ic{width:34px;height:34px}
+ .quick li:last-child:nth-child(odd){grid-column:1/-1}
+ .cards,.content,.why .grid3,.loans{grid-template-columns:1fr}
+ .pcard a,.center a{display:inline-flex;align-items:center;min-height:44px}
+ .cta .wrap{flex-direction:column;align-items:stretch}.cta .wrap>div:last-child{display:flex;gap:.6rem}.cta .btn{flex:1;text-align:center;margin:0}
+ .sb-btns .btn{flex:1;text-align:center}
+ .loc .b{padding:1.1rem 1.2rem}
+ .copy table{font-size:.95rem}.copy td,.copy th{padding:.5rem .6rem}
+ .privacy .tscroll table{min-width:520px}
+ .copy>p:first-child a,.copy>p a[href^="#"]{display:inline-block;padding:.6rem .1rem}
+.cform .grid{gap:.3rem;margin:.8rem 0}.cform .grid label{margin-top:.6rem}.cform input,.cform select{min-height:48px}
+ .cform button{width:100%}.result{margin-top:.8rem}.cform h3,.cform h4{margin-top:1.2rem}
+ #calc-pick{max-width:none;min-height:48px}
+ footer{padding:2rem 0 2.5rem}footer .comp a{display:inline-flex;align-items:center;min-height:44px}
+ footer p a{display:inline-block;padding:.55rem 0}
+}
+@media(max-width:600px){.copy table{font-size:1rem}.quick a{font-size:1rem}footer p a{padding:.7rem 0}}
+.pcard a,.center a{display:inline-flex;align-items:center;min-height:44px}footer .comp a{display:inline-flex;align-items:center;min-height:44px}

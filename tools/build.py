@@ -70,6 +70,8 @@ def head(title,cur):
 <nav class="primary" id="site-menu" aria-label="Main">{pn}<div class="menu-util">{un}</div></nav></div></header>'''
 def page(fn,title,body,scripts=()):
   sc=''.join(f'<script src="{x}"></script>' for x in ('nav.js',)+tuple(scripts))
+  body=re.sub(r'<table',r'<div class="tscroll" role="region" aria-label="Table (scroll sideways if needed)" tabindex="0"><table',body)
+  body=body.replace('</table>','</table></div>')
   open(OUT+fn,'w').write(head(title,fn)+'\n<main id="top">'+body+'</main>\n'+footer+'\n'+sc+'</body></html>\n')
 def split_h1(c):
   m=re.match(r'\s*<h1>(.*?)</h1>(.*)',c,re.S); return m.group(1).strip(),m.group(2)
@@ -81,6 +83,7 @@ def inner(c,cls=''):
 h1,rest=split_h1(content('home'))
 hero=re.search(r'<form class="card" id="login".*?</form>',src,re.S).group(0).replace('<button type="submit">Log in</button>','<button type="submit">Login</button>')
 quick=open('/tmp/quick.html').read()
+for a,b in [('#personal','deposit-products.html'),('#loans','loan-products.html'),('#online','online-banking.html'),('#locations','locations.html'),('#contact','contact.html')]: quick=quick.replace(f'href="{a}"',f'href="{b}"')
 for a,b in [('Personal banking','Deposit Products'),('>Loans<','>Loan Products<'),('Online &amp; Mobile banking','Online Banking'),('Locations &amp; hours','Locations')]: quick=quick.replace(a,b)
 ICON_LOAN='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3"/></svg>'
 ICON_HEART='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21l-8-8a5 5 0 017-7l1 1 1-1a5 5 0 017 7z"/></svg>'
