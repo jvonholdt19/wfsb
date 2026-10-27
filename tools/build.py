@@ -54,7 +54,7 @@ footer=re.search(r'<footer>.*?</footer>',src,re.S).group(0)
 footer=re.sub(r'<div class="comp">.*?</div>','<div class="comp"><a href="speedbump.html?to=fdic">Member FDIC</a><a href="speedbump.html?to=hud">Equal Housing Lender</a></div>',footer,flags=re.S)
 footer=re.sub(r'<p><a href="privacy-statement.html">.*?</p>','<p><a href="index.html">Links</a> | <a href="privacy-statement.html">Privacy Statement</a> | <a href="speedbump.html?to=mainstreet">Reorder Checks</a> | <a href="accessibility.html">Accessibility Statement</a></p>',footer,flags=re.S)
 footer=footer.replace('Compliance text placeholders — official FDIC and Equal Housing Lender notices go here on the live site.','Concept note: FDIC and Equal Housing Lender badges are text placeholders; the official artwork goes here on the live site.')
-footer=re.sub(r'<p class="credits">.*?</p>','<p class="credits">Photos via Wikimedia Commons: Worthington City Hall by Myotus (CC BY 4.0); Jackson by AlexiusHoratius (CC BY-SA 3.0); house by Myotus (CC BY-SA 4.0); smartphone by Océanos y dados (CC0); prairie photos by Mike Budd/U.S. Fish and Wildlife Service (public domain). Images resized. Fonts: Fraunces &amp; Inter (SIL OFL 1.1).</p>',footer,flags=re.S)
+footer=re.sub(r'<p class="credits">.*?</p>','<p class="credits">Branch photos: Worthington Federal Savings Bank (used with the bank&#39;s own images for this concept). Other photos via Wikimedia Commons: Jackson by AlexiusHoratius (CC BY-SA 3.0); house by Myotus (CC BY-SA 4.0); smartphone by Océanos y dados (CC0); prairie photos by Mike Budd/U.S. Fish and Wildlife Service (public domain). Images resized. Fonts: Fraunces &amp; Inter (SIL OFL 1.1).</p>',footer,flags=re.S)
 PRIMARY=[('index.html','Home'),('online-banking.html','Online Banking'),('deposit-products.html','Deposit Products'),('loan-products.html','Loan Products'),('other-products.html','Other Products &amp; Services')]
 UTIL=[('about.html','About'),('locations.html','Locations'),('contact.html','Contact'),('calculators.html','Calculators'),('order-checks.html','Order Checks')]
 def head(title,cur):
@@ -101,9 +101,9 @@ merger='''<section class="merger" id="jackson"><div class="wrap split"><img src=
 <ol class="timeline"><li><b>August 27, 2025</b></li><li><b>March 16th, 2026</b></li></ol>
 <a class="btn" href="locations.html">Locations</a></div></div></section>'''
 locs='''<section id="locations"><div class="wrap"><div class="center"><h2>Office Locations &amp; Hours</h2></div><div class="cards">
-<article class="loc"><img src="images/worthington.webp" alt="Worthington City Hall, Worthington, Minnesota (town photo, not the bank)" width="900" height="506" loading="lazy"><div class="b"><h3>WORTHINGTON LOCATION</h3><p>PO Box 339, 418 11th Street<br>Worthington, MN 56187<br>Phone <a href="tel:5073722131">507-372-2131</a><br>Toll Free <a href="tel:8009146023">800-914-6023</a></p><p><strong>LOBBY HOURS OF OPERATION</strong><br>Monday-Friday 8:30-4:00</p><p><strong>DRIVE UP HOURS OF OPERATION</strong><br>Monday-Thursday 8:30-4:00<br>Friday 8:30-5:00</p><p>Drive Up ATM Available 24/7</p></div></article>
-<article class="loc"><img src="images/lakefield.webp" alt="Blooming Minnesota prairie with purple blazing star and goldenrod (scenic photo, not the bank)" width="900" height="506" loading="lazy"><div class="b"><h3>LAKEFIELD LOCATION</h3><p>PO Box 157, 313 Main Street<br>Lakefield, MN 56150<br>Phone <a href="tel:5076626680">507-662-6680</a></p><p><strong>HOURS OF OPERATION</strong><br>Monday-Friday 9:00-4:00</p></div></article>
-<article class="loc"><img src="images/jackson.webp" alt="Downtown Jackson, Minnesota (town photo, not the bank)" width="900" height="506" loading="lazy"><div class="b"><h3>JACKSON LOCATION</h3><p>414 2nd Avenue, PO Box 46<br>Jackson, MN 56143<br>Phone <a href="tel:5078474714">507-847-4714</a></p><p><strong>HOURS OF OPERATION</strong><br>Monday-Friday 8:30-4:00</p><p>ATM Available 24/7 in the Entryway</p></div></article>
+<article class="loc"><img src="images/branch-worthington.webp" alt="Worthington Federal Savings Bank, Worthington office" width="300" height="225" loading="lazy"><div class="b"><h3>WORTHINGTON LOCATION</h3><p>PO Box 339, 418 11th Street<br>Worthington, MN 56187<br>Phone <a href="tel:5073722131">507-372-2131</a><br>Toll Free <a href="tel:8009146023">800-914-6023</a></p><p><strong>LOBBY HOURS OF OPERATION</strong><br>Monday-Friday 8:30-4:00</p><p><strong>DRIVE UP HOURS OF OPERATION</strong><br>Monday-Thursday 8:30-4:00<br>Friday 8:30-5:00</p><p>Drive Up ATM Available 24/7</p></div></article>
+<article class="loc"><img src="images/branch-lakefield.webp" alt="Worthington Federal Savings Bank, Lakefield office" width="300" height="225" loading="lazy"><div class="b"><h3>LAKEFIELD LOCATION</h3><p>PO Box 157, 313 Main Street<br>Lakefield, MN 56150<br>Phone <a href="tel:5076626680">507-662-6680</a></p><p><strong>HOURS OF OPERATION</strong><br>Monday-Friday 9:00-4:00</p></div></article>
+<article class="loc"><img src="images/branch-jackson.webp" alt="Worthington Federal Savings Bank, Jackson office" width="300" height="225" loading="lazy"><div class="b"><h3>JACKSON LOCATION</h3><p>414 2nd Avenue, PO Box 46<br>Jackson, MN 56143<br>Phone <a href="tel:5078474714">507-847-4714</a></p><p><strong>HOURS OF OPERATION</strong><br>Monday-Friday 8:30-4:00</p><p>ATM Available 24/7 in the Entryway</p></div></article>
 </div><p class="center"><a href="locations.html">Full location details →</a></p></div></section>'''
 herotxt=f'<div><p class="eyebrow">Worthington · Lakefield · Jackson</p><h1>{h1}</h1><p class="lead">We are proud to be a part of our communities, and to participate in the growth and prosperity of our region.</p><ul class="pills"><li>Three locations</li><li>24 Hour Online Banking</li><li>Mobile Deposit</li></ul></div>'
 welcome=f'<section class="pt-welcome"><div class="wrap copy narrow">{rest}</div></section>'
@@ -120,5 +120,19 @@ page('speedbump.html','Notice',f'<section><div class="wrap copy narrow">{sb}<p c
 page('accessibility.html','Accessibility Statement','<div class="page-hero"><div class="wrap"><h1>Accessibility Statement</h1></div></div><section><div class="wrap"><p class="note">Concept note: the live site has no accessibility statement page. The bank’s own statement goes here.</p></div></section>')
 # CALCULATOR
 calc=open(OUT+'tools/calculator.html').read()
-page('calculators.html','Calculators',calc,('calculators.js',))
+page('calculators.html','Calculators',calc,('calcmath.js','calculators.js'))
 print('ok')
+
+# Open Graph / Twitter share tags for every page (incl. hand-edited ones)
+import glob as _g, html as _h
+_D="Hello and welcome to Worthington Federal Savings Bank&#39;s Website."
+for _f in _g.glob('*.html'):
+  _s=open(_f).read()
+  _s=re.sub(r'<meta property="og:[^>]*>|<meta name="twitter:[^>]*>\n?','',_s)
+  _t=re.search(r'<title>(.*?)</title>',_s).group(1)
+  _u='https://wfsb.nwimpm.com/'+('' if _f=='index.html' else _f)
+  _m=(f'<meta property="og:title" content="{_t}"><meta property="og:description" content="{_D}"><meta property="og:type" content="website">'
+      f'<meta property="og:url" content="{_u}"><meta property="og:image" content="https://wfsb.nwimpm.com/images/share.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
+      f'<meta property="og:image:alt" content="Worthington Federal Savings Bank, Worthington office, with the names Worthington, Lakefield and Jackson"><meta name="twitter:card" content="summary_large_image">\n')
+  _s=_s.replace('</title>','</title>'+_m,1)
+  open(_f,'w').write(_s)
