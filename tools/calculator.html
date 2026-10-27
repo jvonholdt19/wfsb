@@ -1,0 +1,52 @@
+<div class="page-hero"><div class="wrap"><h1>CALCULATORS</h1></div></div>
+<section><div class="wrap"><div class="panel calc">
+<label for="calc-pick" class="pick-label">Choose a calculator</label>
+<select id="calc-pick">
+<option value="mortgage">Mortgage Payment Calculator</option>
+<option value="loan">Loan Payment Calculator</option>
+<option value="savings">Savings Estimator</option>
+<option value="debt">Debt Payoff Calculator</option>
+</select>
+
+<form class="cform" id="f-mortgage" data-calc="mortgage" novalidate>
+<h2>MORTGAGE PAYMENT CALCULATOR</h2>
+<p>Use our loan calculator to help you determine the loan financing amount and payment options that are best for you. Web browser must support JavaScript.</p>
+<div class="grid"><label for="m-yr">Years:</label><input id="m-yr" inputmode="decimal" value="30">
+<label for="m-ir">Interest:</label><input id="m-ir" inputmode="decimal" value="8.0">
+<label for="m-la">Loan Amount:</label><input id="m-la" inputmode="decimal" value="100000"></div>
+<button type="submit">Calculate Now!</button>
+<h3>Results</h3><p class="result" role="status" aria-live="polite"><span class="rl">Monthly Principal Interest</span> <output id="m-out"></output></p>
+</form>
+
+<form class="cform" id="f-loan" data-calc="loan" novalidate hidden>
+<h2>LOAN PAYMENT CALCULATOR</h2>
+<p>Use our loan calculator to help you determine the loan financing amount and payment options that are best for you. Web browser must support JavaScript.</p>
+<div class="grid"><label for="l-p">Principal:</label><input id="l-p" inputmode="decimal">
+<label for="l-n">Number of Payments:</label><input id="l-n" inputmode="numeric">
+<label for="l-i">Interest Rate:</label><input id="l-i" inputmode="decimal"></div>
+<button type="submit">Calculate Now!</button>
+<h3>Results</h3><p class="result" role="status" aria-live="polite"><span class="rl">Monthly Payment</span> <output id="l-out"></output></p>
+</form>
+
+<form class="cform" id="f-savings" data-calc="savings" novalidate hidden>
+<h2>SAVINGS ESTIMATOR</h2>
+<p>Enter how much you can afford to save each month, how long you can save this amount, and the interest rate you can get on your savings and this script will display your total savings.</p>
+<div class="grid"><label for="s-pay">Total invested each month:</label><input id="s-pay" inputmode="decimal">
+<label for="s-mo">Number of months/years to acquire sum:</label><span class="pair"><input id="s-mo" inputmode="numeric" maxlength="3"><select id="s-per" aria-label="Months or years"><option value="m">Months</option><option value="y">Years</option></select></span>
+<label for="s-int">Interest rate on savings:</label><span class="pair"><input id="s-int" inputmode="decimal" maxlength="5"> %</span></div>
+<button type="submit">How much will I have?</button>
+<p class="result" role="status" aria-live="polite"><output id="s-out">$0.00</output></p>
+</form>
+
+<form class="cform" id="f-debt" data-calc="debt" novalidate hidden>
+<h2>DEBT PAYOFF CALCULATOR</h2>
+<p><b>What will it take to pay off my credit card?</b></p>
+<div class="grid"><label for="d-bal">Enter your credit card balance: $</label><input id="d-bal" inputmode="decimal">
+<label for="d-rate">Enter the credit card's interest rate: </label><span class="pair"><input id="d-rate" inputmode="decimal"> %</span>
+<label for="d-pay">Enter payment amount per month: $</label><input id="d-pay" inputmode="decimal">
+<span class="or"><b>or</b></span><span></span>
+<label for="d-months">Enter desired months until debt free: </label><input id="d-months" inputmode="numeric"></div>
+<button type="submit">Calculate</button>
+<p class="result" role="status" aria-live="polite"><output id="d-out"></output></p>
+</form>
+</div></div></section>

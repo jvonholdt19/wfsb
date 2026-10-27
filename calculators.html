@@ -1,0 +1,66 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Calculators — Worthington Federal Savings Bank (Design Concept)</title>
+<link rel="preload" href="fonts/fraunces-700.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="style.css"></head><body>
+<div class="concept" role="note">Design concept prepared by NWIM Project Management for Worthington Federal Savings — not the official bank website.</div>
+<nav class="util" aria-label="Secondary"><div class="wrap"><a href="about.html">About</a><a href="locations.html">Locations</a><a href="contact.html">Contact</a><a href="calculators.html" aria-current="page">Calculators</a><a href="order-checks.html">Order Checks</a></div></nav>
+<header><div class="wrap"><a class="mark" href="index.html"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="8" fill="#0d2c40"/><text x="17" y="23" text-anchor="middle" font-family="Georgia,serif" font-size="17" font-weight="700" fill="#e9b25c">W</text></svg><span>Worthington Federal<small>Savings Bank</small></span></a>
+<button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+<nav class="primary" id="site-menu" aria-label="Main"><a href="index.html">Home</a><a href="online-banking.html">Online Banking</a><a href="deposit-products.html">Deposit Products</a><a href="loan-products.html">Loan Products</a><a href="other-products.html">Other Products &amp; Services</a><div class="menu-util"><a href="about.html">About</a><a href="locations.html">Locations</a><a href="contact.html">Contact</a><a href="calculators.html" aria-current="page">Calculators</a><a href="order-checks.html">Order Checks</a></div></nav></div></header>
+<main id="top"><div class="page-hero"><div class="wrap"><h1>CALCULATORS</h1></div></div>
+<section><div class="wrap"><div class="panel calc">
+<label for="calc-pick" class="pick-label">Choose a calculator</label>
+<select id="calc-pick">
+<option value="mortgage">Mortgage Payment Calculator</option>
+<option value="loan">Loan Payment Calculator</option>
+<option value="savings">Savings Estimator</option>
+<option value="debt">Debt Payoff Calculator</option>
+</select>
+
+<form class="cform" id="f-mortgage" data-calc="mortgage" novalidate>
+<h2>MORTGAGE PAYMENT CALCULATOR</h2>
+<p>Use our loan calculator to help you determine the loan financing amount and payment options that are best for you. Web browser must support JavaScript.</p>
+<div class="grid"><label for="m-yr">Years:</label><input id="m-yr" inputmode="decimal" value="30">
+<label for="m-ir">Interest:</label><input id="m-ir" inputmode="decimal" value="8.0">
+<label for="m-la">Loan Amount:</label><input id="m-la" inputmode="decimal" value="100000"></div>
+<button type="submit">Calculate Now!</button>
+<h3>Results</h3><p class="result" role="status" aria-live="polite"><span class="rl">Monthly Principal Interest</span> <output id="m-out"></output></p>
+</form>
+
+<form class="cform" id="f-loan" data-calc="loan" novalidate hidden>
+<h2>LOAN PAYMENT CALCULATOR</h2>
+<p>Use our loan calculator to help you determine the loan financing amount and payment options that are best for you. Web browser must support JavaScript.</p>
+<div class="grid"><label for="l-p">Principal:</label><input id="l-p" inputmode="decimal">
+<label for="l-n">Number of Payments:</label><input id="l-n" inputmode="numeric">
+<label for="l-i">Interest Rate:</label><input id="l-i" inputmode="decimal"></div>
+<button type="submit">Calculate Now!</button>
+<h3>Results</h3><p class="result" role="status" aria-live="polite"><span class="rl">Monthly Payment</span> <output id="l-out"></output></p>
+</form>
+
+<form class="cform" id="f-savings" data-calc="savings" novalidate hidden>
+<h2>SAVINGS ESTIMATOR</h2>
+<p>Enter how much you can afford to save each month, how long you can save this amount, and the interest rate you can get on your savings and this script will display your total savings.</p>
+<div class="grid"><label for="s-pay">Total invested each month:</label><input id="s-pay" inputmode="decimal">
+<label for="s-mo">Number of months/years to acquire sum:</label><span class="pair"><input id="s-mo" inputmode="numeric" maxlength="3"><select id="s-per" aria-label="Months or years"><option value="m">Months</option><option value="y">Years</option></select></span>
+<label for="s-int">Interest rate on savings:</label><span class="pair"><input id="s-int" inputmode="decimal" maxlength="5"> %</span></div>
+<button type="submit">How much will I have?</button>
+<p class="result" role="status" aria-live="polite"><output id="s-out">$0.00</output></p>
+</form>
+
+<form class="cform" id="f-debt" data-calc="debt" novalidate hidden>
+<h2>DEBT PAYOFF CALCULATOR</h2>
+<p><b>What will it take to pay off my credit card?</b></p>
+<div class="grid"><label for="d-bal">Enter your credit card balance: $</label><input id="d-bal" inputmode="decimal">
+<label for="d-rate">Enter the credit card's interest rate: </label><span class="pair"><input id="d-rate" inputmode="decimal"> %</span>
+<label for="d-pay">Enter payment amount per month: $</label><input id="d-pay" inputmode="decimal">
+<span class="or"><b>or</b></span><span></span>
+<label for="d-months">Enter desired months until debt free: </label><input id="d-months" inputmode="numeric"></div>
+<button type="submit">Calculate</button>
+<p class="result" role="status" aria-live="polite"><output id="d-out"></output></p>
+</form>
+</div></div></section>
+</main>
+<footer><div class="wrap"><div class="comp"><a href="speedbump.html?to=fdic">Member FDIC</a><a href="speedbump.html?to=hud">Equal Housing Lender</a></div><p class="small">Concept note: FDIC and Equal Housing Lender badges are text placeholders; the official artwork goes here on the live site.</p>
+<p><a href="index.html">Links</a> | <a href="privacy-statement.html">Privacy Statement</a> | <a href="speedbump.html?to=mainstreet">Reorder Checks</a> | <a href="accessibility.html">Accessibility Statement</a></p>
+<p>Design concept by NWIM Project Management. Not affiliated with or endorsed by Worthington Federal Savings Bank. Content sourced from the bank's public website.</p>
+<p class="credits">Photos via Wikimedia Commons: Worthington City Hall by Myotus (CC BY 4.0); Jackson by AlexiusHoratius (CC BY-SA 3.0); house by Myotus (CC BY-SA 4.0); smartphone by Océanos y dados (CC0); prairie photos by Mike Budd/U.S. Fish and Wildlife Service (public domain). Images resized. Fonts: Fraunces &amp; Inter (SIL OFL 1.1).</p></div></footer>
+<script src="nav.js"></script><script src="calcmath.js"></script><script src="calculators.js"></script></body></html>
